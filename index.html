@@ -9,6 +9,39 @@
     <script src="https://kit.fontawesome.com/e6a4cb6747.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <h1>Password Generator</h1>
     
+    <form action="">
+        <div>
+            <label for="length">Enter the minimum length for your password: </label>
+            <input type="number">
+        </div>
+        <div>
+            <label for="numbers">Do you want to have numbers in your password?</label>
+            <label>
+              <input type="radio" name="choice-radio">
+              Yes
+            </label>
+            <label>
+              <input type="radio" name="choice-radio">
+              No
+            </label>
+        </div>
+        <div>
+        <label for="special-characters">Do you want to have special characters in your password?</label>
+        <label>
+            <input type="radio" name="choice-radio">
+            Yes
+          </label>
+          <label>
+            <input type="radio" name="choice-radio">
+            No
+          </label>
+        </div>
+        <button type="submit">Generate</button>
+        <div>
+            <p>The generated password is: </p>
+        </div>
+    </form>
 </body>
 </html>
