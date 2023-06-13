@@ -11,38 +11,35 @@
 </head>
 <body>
     <h1>Password Generator</h1>
+
+    <div class="container">
+        <h3>Generate passwords with ease</h3>
+        <div class="password-container">
+            <p class="password">p@$$w0rd</p>
+            <button class="regenerate-button"><i class="fa-solid fa-rotate"></i></button>
+        </div>
+        <hr>
+        
+        <div class="copy-container">
+            <p class="strength-detector"><i class="fa-solid fa-circle-check"></i> Strong password</p>
+            <button class="copy-button">Copy password</button>
+        </div>
+
+        <div class="slider-container">
+            <p class="password-length">Password length (<span id="amount">16</span>)</p>
+            <input class="slider" type="range" value="16" min="4" max="40" oninput="showAmount(this.value)">
+        </div>
+
+        <div class="customize-container">
+            <input type="checkbox">
+            <label for="letters">Letters (e.g. Aa)</label>
+            <input type="checkbox">
+            <label for="digits">Digits (e.g. 123)</label>
+            <input type="checkbox">
+            <label for="symbols">Symbols (@#$%!?)</label>
+        </div>
+    </div>
     
-    <form action="">
-        <div>
-            <label for="length">Enter the minimum length for your password: </label>
-            <input type="number">
-        </div>
-        <div>
-            <label for="numbers">Do you want to have numbers in your password?</label>
-            <label>
-              <input type="radio" name="choice-radio">
-              Yes
-            </label>
-            <label>
-              <input type="radio" name="choice-radio">
-              No
-            </label>
-        </div>
-        <div>
-        <label for="special-characters">Do you want to have special characters in your password?</label>
-        <label>
-            <input type="radio" name="choice-radio">
-            Yes
-          </label>
-          <label>
-            <input type="radio" name="choice-radio">
-            No
-          </label>
-        </div>
-        <button type="submit">Generate</button>
-        <div>
-            <p>The generated password is: </p>
-        </div>
-    </form>
+
 </body>
 </html>

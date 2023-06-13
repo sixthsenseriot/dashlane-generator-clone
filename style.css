@@ -1,0 +1,107 @@
+body {
+    background-color: #1C815A;
+}
+
+h1 {
+    color: white;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.container {
+    display: block;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding-top: 80px;
+}
+
+h3 {
+    color: white;
+    font-weight: 700;
+    padding-bottom: 2px;
+}
+
+.password-container {
+    color: white;
+    font-size: 30px;
+}
+
+.password {
+    display: inline-block;
+}
+
+.regenerate-button {
+    background: none;
+    border: none;
+    color: white;
+    left: 772px;
+    position: relative;
+}
+
+hr {
+    background-color: white;
+    bottom: 22px;
+    height: 3px;
+    position: relative;
+}
+
+.copy-container {
+    bottom: 20px;
+    position: relative;
+}
+
+.strength-detector {
+    color: white;
+    display: inline-block;
+    font-size: 22px;
+}
+
+.copy-button {
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    color: #09363F;
+    font-weight: 600;
+    left: 624px;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.slider-container {
+    display: block;
+    margin: 0 auto;
+}
+
+.slider {
+    background: #d3d3d3;
+    border-radius: 5px;  
+    height: 10px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+    -webkit-transition: .2s;
+    -webkit-appearance: none;
+    width: 100%;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; 
+    background: white;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+  }
+
+  .password-length {
+    color: white;
+  }
