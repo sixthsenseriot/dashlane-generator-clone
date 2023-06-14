@@ -36,8 +36,8 @@ h3 {
     background: none;
     border: none;
     color: white;
-    left: 772px;
-    position: relative;
+    left: 1080px;
+    position: fixed;
 }
 
 .regenerate-button:hover {
