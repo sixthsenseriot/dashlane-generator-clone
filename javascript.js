@@ -28,7 +28,8 @@ function regenerate(event) {
 let regenerate_button = document.querySelector("#regenerate-button");
 regenerate_button.addEventListener("click", regenerate);
 
-// show slider amount
+// show slider amount and regenerate password based on length
 function showAmount(newAmount) {
     document.getElementById("amount").innerHTML = newAmount;
+    document.getElementById("password").innerHTML = generate_password(newAmount);
 }
