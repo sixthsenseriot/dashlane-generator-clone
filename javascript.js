@@ -1,13 +1,24 @@
 // generate password
 function generate_password(length) {
     let password = '';
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var characters = '';
+    // generate if checkbox
+    const letter_checkbox = document.querySelector("#letters");
+    const digits_checkbox = document.querySelector("#digits");
+    const symbols_checkbox = document.querySelector("#symbols");
+    if (letter_checkbox.checked) {
+        characters += "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    } if (digits_checkbox.checked) {
+        characters += '0123456789';
+    } if (symbols_checkbox.checked) {
+        characters += '!?@#$&';
+    }
     const charactersLength = characters.length;
     let counter = 0;
     var length = document.getElementById("slider").value;
     while (counter < length) {
-      password += characters.charAt(Math.floor(Math.random() * charactersLength));
-      counter += 1;
+        password += characters.charAt(Math.floor(Math.random() * charactersLength));
+        counter += 1;
     }
     return password
 }
@@ -33,3 +44,6 @@ function showAmount(newAmount) {
     document.getElementById("amount").innerHTML = newAmount;
     document.getElementById("password").innerHTML = generate_password(newAmount);
 }
+
+const checkbox = document.querySelector("#letters");
+console.log(checkbox.checked)
