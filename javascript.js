@@ -39,6 +39,38 @@ function regenerate(event) {
 let regenerate_button = document.querySelector("#regenerate-button");
 regenerate_button.addEventListener("click", regenerate);
 
+// regenerate password on checkbox press
+var letter_check = document.querySelector("input[name=letters]");
+var digits_check = document.querySelector("input[name=digits]");
+var symbols_check = document.querySelector("input[name=symbols]");
+letter_check.addEventListener("change", function() {
+    if (this.checked) {
+        let displayCheck = document.querySelector("#password");
+        displayCheck.innerHTML = generate_password()
+    } else {
+        let displayCheck = document.querySelector("#password");
+        displayCheck.innerHTML = generate_password()
+    }
+})
+digits_check.addEventListener("change", function() {
+    if (this.checked) {
+        let displayCheck = document.querySelector("#password");
+        displayCheck.innerHTML = generate_password()
+    } else {
+        let displayCheck = document.querySelector("#password");
+        displayCheck.innerHTML = generate_password()
+    }
+})
+symbols_check.addEventListener("change", function() {
+    if (this.checked) {
+        let displayCheck = document.querySelector("#password");
+        displayCheck.innerHTML = generate_password()
+    } else {
+        let displayCheck = document.querySelector("#password");
+        displayCheck.innerHTML = generate_password()
+    }
+})
+
 // show slider amount and regenerate password based on length
 function showAmount(newAmount) {
     document.getElementById("amount").innerHTML = newAmount;
