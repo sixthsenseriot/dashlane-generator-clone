@@ -19,6 +19,15 @@ window.onload = function display_password(event) {
     displayPassword.innerHTML = generate_password();
 }
 
+// regenerate password on button press
+function regenerate(event) {
+    event.preventDefault();
+    let displayRegenerate = document.querySelector("#password");
+    displayRegenerate.innerHTML = generate_password()
+}
+let regenerate_button = document.querySelector("#regenerate-button");
+regenerate_button.addEventListener("click", regenerate);
+
 // show slider amount
 function showAmount(newAmount) {
     document.getElementById("amount").innerHTML = newAmount;
