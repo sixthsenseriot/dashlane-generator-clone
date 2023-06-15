@@ -18,7 +18,7 @@
     <div class="container">
         <h3>Generate passwords with ease</h3>
         <div class="password-container">
-            <p class="password" id="password">p@$$w0rd</p>
+            <p class="password" id="password">P@$$w0rd</p>
         </div>
         <div class="regenerate-container">
         <button class="regenerate-button" id="regenerate-button"><i class="fa-solid fa-rotate"></i></button>
@@ -36,10 +36,10 @@
         </div>
 
         <div class="customize-container">
-            <input type="checkbox" id="letters" name="letters" value="yes" checked>
+            <input type="checkbox" id="letters" name="letters" value="yes" checked onchange="check">
             <label for="letters" class="letters">Letters (e.g. Aa)</label>
             
-            <input type="checkbox" id="digits" name="digits" value="yes">
+            <input type="checkbox" id="digits" name="digits" value="yes" checked onchange="check">
             <label for="digits" class="digits">Digits (e.g. 123)</label>
             
             <input type="checkbox" id="symbols" name="symbols" value="yes">

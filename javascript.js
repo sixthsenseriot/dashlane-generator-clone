@@ -40,9 +40,9 @@ let regenerate_button = document.querySelector("#regenerate-button");
 regenerate_button.addEventListener("click", regenerate);
 
 // regenerate password on checkbox press
-var letter_check = document.querySelector("input[name=letters]");
-var digits_check = document.querySelector("input[name=digits]");
-var symbols_check = document.querySelector("input[name=symbols]");
+var letter_check = document.querySelector("#letters");
+var digits_check = document.querySelector("#digits");
+var symbols_check = document.querySelector("#symbols");
 letter_check.addEventListener("change", function() {
     if (this.checked) {
         let displayCheck = document.querySelector("#password");
@@ -71,11 +71,43 @@ symbols_check.addEventListener("change", function() {
     }
 })
 
+// require letters or digits checkbox to be checked
+function enable_letters() {
+    document.getElementById("letters").disabled = false;
+}
+function disable_letters() {
+    document.getElementById("letters").disabled = true;
+}
+function enable_digits() {
+    document.getElementById("digits").disabled = false;
+}
+function disable_digits() {
+    document.getElementById("digits").disabled = true;
+}
+
+letter_check.addEventListener("change", function(){
+    if (this.checked) {
+        let enableLetters = document.querySelector("#letters")
+        enableLetters.innerHTML = enable_digits()
+    } else {
+        let enableLetters = document.querySelector("#letters")
+        enableLetters.innerHTML = disable_digits()
+    }
+})
+digits_check.addEventListener("change", function(){
+    if (this.checked) {
+        let enableDigits = document.querySelector("#digits")
+        enableDigits.innerHTML = enable_letters()
+    } else {
+        let enableDigits = document.querySelector("#digits")
+        enableDigits.innerHTML = disable_letters()
+    }
+})
+
 // show slider amount and regenerate password based on length
 function showAmount(newAmount) {
     document.getElementById("amount").innerHTML = newAmount;
     document.getElementById("password").innerHTML = generate_password(newAmount);
 }
-
 const checkbox = document.querySelector("#letters");
 console.log(checkbox.checked)
