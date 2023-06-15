@@ -35,9 +35,11 @@ h3 {
 .regenerate-button {
     background: none;
     border: none;
+    bottom: 60px;
     color: white;
-    left: 1080px;
-    position: fixed;
+    font-size: 30px;
+    left: 924px;
+    position: relative;
 }
 
 .regenerate-button:hover {
@@ -46,13 +48,13 @@ h3 {
 
 hr {
     background-color: white;
-    bottom: 22px;
+    bottom: 70px;
     height: 3px;
     position: relative;
 }
 
 .copy-container {
-    bottom: 20px;
+    bottom: 60px;
     position: relative;
 }
 

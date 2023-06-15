@@ -19,7 +19,9 @@
         <h3>Generate passwords with ease</h3>
         <div class="password-container">
             <p class="password" id="password">p@$$w0rd</p>
-            <button class="regenerate-button" id="regenerate-button"><i class="fa-solid fa-rotate"></i></button>
+        </div>
+        <div class="regenerate-container">
+        <button class="regenerate-button" id="regenerate-button"><i class="fa-solid fa-rotate"></i></button>
         </div>
         <hr>
         
@@ -30,7 +32,7 @@
 
         <div class="slider-container">
             <p class="password-length">LENGTH (<span id="amount">16</span>)</p>
-            <input class="slider" type="range" value="16" min="4" max="40" oninput="showAmount(this.value)">
+            <input class="slider" type="range" id="slider" value="16" min="4" max="40" oninput="showAmount(this.value)">
         </div>
 
         <div class="customize-container">

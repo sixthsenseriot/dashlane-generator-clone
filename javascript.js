@@ -4,7 +4,7 @@ function generate_password(length) {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     const charactersLength = characters.length;
     let counter = 0;
-    length = 16;
+    var length = document.getElementById("slider").value;
     while (counter < length) {
       password += characters.charAt(Math.floor(Math.random() * charactersLength));
       counter += 1;
