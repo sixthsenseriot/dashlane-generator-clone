@@ -70,10 +70,10 @@ hr {
     border-radius: 4px;
     color: #09363F;
     font-weight: 600;
-    left: 624px;
     padding: 10px 20px;
     position: relative;
-     transition: all 100ms ease-in-out;
+    float: right;
+    transition: all 100ms ease-in-out;
 }
 
 .copy-button:hover {

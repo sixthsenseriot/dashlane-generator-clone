@@ -87,20 +87,20 @@ function disable_digits() {
 
 letter_check.addEventListener("change", function(){
     if (this.checked) {
-        let enableLetters = document.querySelector("#letters")
-        enableLetters.innerHTML = enable_digits()
+        let enableLetters = document.querySelector("#letters");
+        enableLetters.innerHTML = enable_digits();
     } else {
-        let enableLetters = document.querySelector("#letters")
-        enableLetters.innerHTML = disable_digits()
+        let enableLetters = document.querySelector("#letters");
+        enableLetters.innerHTML = disable_digits();
     }
 })
 digits_check.addEventListener("change", function(){
     if (this.checked) {
-        let enableDigits = document.querySelector("#digits")
-        enableDigits.innerHTML = enable_letters()
+        let enableDigits = document.querySelector("#digits");
+        enableDigits.innerHTML = enable_letters();
     } else {
-        let enableDigits = document.querySelector("#digits")
-        enableDigits.innerHTML = disable_letters()
+        let enableDigits = document.querySelector("#digits");
+        enableDigits.innerHTML = disable_letters();
     }
 })
 
@@ -111,3 +111,16 @@ function showAmount(newAmount) {
 }
 const checkbox = document.querySelector("#letters");
 console.log(checkbox.checked)
+
+// copy password button
+const copy_button = document.querySelector("#copy-button");
+// change button to say `copied` and revert back
+copy_button.addEventListener("click", function(){
+    let showCopied = document.querySelector("#copy-button");
+    showCopied.innerHTML = `Copied!`;
+    const myTimeout = setTimeout(revert, 800);
+    function revert() {
+        let revertCopy = document.querySelector("#copy-button");
+        revertCopy.innerHTML = `Copy password`
+    }
+})
