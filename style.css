@@ -32,6 +32,12 @@ h3 {
     font-family: 'Space Mono', monospace;
 }
 
+button,
+button:active,
+button:focus {
+    outline: none;
+}
+
 .regenerate-button {
     background: none;
     border: none;
@@ -43,7 +49,9 @@ h3 {
 }
 
 .regenerate-button:hover {
+    color: #77B39C;
     cursor: pointer;
+    transition: all 100ms ease-in-out;
 }
 
 hr {
