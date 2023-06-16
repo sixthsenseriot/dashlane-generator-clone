@@ -108,6 +108,20 @@ digits_check.addEventListener("change", function(){
 function showAmount(newAmount) {
     document.getElementById("amount").innerHTML = newAmount;
     document.getElementById("password").innerHTML = generate_password(newAmount);
+    let passStrength = document.querySelector("#strength-detector")
+    // change color and strength based on range length and password strength
+    if (6 < newAmount < 9) {
+        document.body.style.background = "#BE4E3A";
+        passStrength.innerHTML = `<i class="fa-solid fa-circle-minus"></i> Fairly strong password`;
+    }
+    if (newAmount < 7) {
+        document.body.style.background = "#D1364E";
+        passStrength.innerHTML = `<i class="fa-solid fa-circle-xmark"></i> Weak password`;
+    }
+    if (newAmount > 8) {
+        document.body.style.background = "#1C815A";
+        passStrength.innerHTML = `<i class="fa-solid fa-circle-check"></i> Strong password`;
+    }
 }
 
 // copy password button - change button to say `copied` and revert back
