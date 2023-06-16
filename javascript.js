@@ -109,13 +109,10 @@ function showAmount(newAmount) {
     document.getElementById("amount").innerHTML = newAmount;
     document.getElementById("password").innerHTML = generate_password(newAmount);
 }
-const checkbox = document.querySelector("#letters");
-console.log(checkbox.checked)
 
-// copy password button
+// copy password button - change button to say `copied` and revert back
 const copy_button = document.querySelector("#copy-button");
-// change button to say `copied` and revert back
-copy_button.addEventListener("click", function(){
+copy_button.addEventListener("click", function() {
     let showCopied = document.querySelector("#copy-button");
     showCopied.innerHTML = `Copied!`;
     const myTimeout = setTimeout(revert, 800);
@@ -124,3 +121,17 @@ copy_button.addEventListener("click", function(){
         revertCopy.innerHTML = `Copy password`
     }
 })
+
+// copy password to clipboard on click copy button
+function copyToClipboard() {
+    const str = document.getElementById('password').innerText
+    const el = document.createElement('textarea')
+    el.value = str
+    el.setAttribute('readonly', '')
+    el.style.position = 'absolute'
+    el.style.left = '-9999px'
+    document.body.appendChild(el)
+    el.select()
+    document.execCommand('copy')
+    document.body.removeChild(el)
+}
